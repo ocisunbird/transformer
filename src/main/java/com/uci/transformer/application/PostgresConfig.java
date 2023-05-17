@@ -5,7 +5,7 @@ import com.uci.transformer.odk.entity.converters.AssessmentWriteConverter;
 import com.uci.utils.PSQL.JsonToMapConverter;
 import com.uci.utils.PSQL.MapToJsonConverter;
 import io.r2dbc.postgresql.PostgresqlConnectionConfiguration;
-import io.r2dbc.postgresql.client.SslMode;
+import io.r2dbc.postgresql.client.SSLMode;
 import io.r2dbc.postgresql.PostgresqlConnectionFactory;
 import io.r2dbc.spi.ConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -42,7 +42,7 @@ public class PostgresConfig extends AbstractR2dbcConfiguration {
                 .username(username)
                 .password(password)
                 .database(database)
-                .sslMode(SslMode.REQUIRED)
+                .sslMode(SSLMode.DISABLED)
                 .build());
     }
 
