@@ -42,7 +42,7 @@ public class PostgresConfig extends AbstractR2dbcConfiguration {
                 .username(username)
                 .password(password)
                 .database(database)
-                .sslMode(SSLMode.DISABLED)
+                .sslMode(SSLMode.REQUIRE)
                 .build());
     }
 
